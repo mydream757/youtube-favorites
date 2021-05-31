@@ -1,0 +1,40 @@
+.video-anchor{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.video-item{
+    width: 100%;
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    button {
+        background: #f30202;
+        color : white;
+        outline: none;
+        border: none;
+        font-size: 10pt;
+        font-weight: 750;
+        padding-top : 5px;
+        padding-bottom : 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background : #ce5454;
+        }
+    }
+    .add-btn{
+        position : absolute;
+        right: 5%;
+        top: 50%;
+        &.hover{
+            color: yellow;
+        }
+    }
+}

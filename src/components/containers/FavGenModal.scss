@@ -1,0 +1,60 @@
+form{
+    margin: 0 auto;
+    padding: 1em;
+    div + div{
+        margin-top: 2em;
+    }
+    label{
+        display: inline-block;
+        width: auto;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: right;
+    }
+    input, textarea{
+        display: flex;
+        background: #495057;
+        color: white;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        width: 300px;
+        outline: none;
+        border: 1px solid #999;
+        &:focus{
+            border-color: #000;
+        }
+        &.err{
+            border: 1px solid red;
+        }
+        
+    };
+    span{
+        position: absolute;
+        color: red;
+        font-weight: 500;
+    }
+    textarea{
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    };
+    
+    .btn-group{
+        display: flex;
+        button{
+            display: inline-flex;
+            font-size: 1.2rem;
+            outline: none;
+            border: none;
+            padding-left: 1em;
+            padding-right: 1em;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            border-radius: 1rem;
+            background: #22b8cf;
+            margin: auto;
+            
+        }
+    }
+}

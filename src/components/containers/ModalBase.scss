@@ -1,0 +1,27 @@
+.modal-base{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    .dimmer{
+        z-index: 10000;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0.8;
+        
+    }
+    
+    .modalContainer{
+        position: absolute;
+        padding : 16px;
+        z-index: 10001;
+        width: auto;
+        height: auto;
+        background: white;
+    }
+}
