@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Favorite.scss';
 import FavoriteGridItem from '../Item/FavoriteGridItem';
-import ModalBase from './ModalBase';
-import FavGenModal from './FavGenModal';
+import ModalBase from './ModalBase/ModalBase';
+import FavGenModal from './FavGenModal/FavGenModal';
 import Loading from '../Loading';
 import { Link } from 'react-router-dom';
 

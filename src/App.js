@@ -1,7 +1,7 @@
 import './App.scss';
 import { Route } from 'react-router';
-import Home from './components/containers/Home';
-import Favorites from './components/containers/Favorites';
+import Home from './components/containers/Home/Home';
+import Favorites from './components/containers/Favorites/Favorites';
 import { Link } from 'react-router-dom';
 
 function App() {

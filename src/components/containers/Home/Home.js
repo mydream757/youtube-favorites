@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import VideoGridItem from '../Item/VideoGridItem';
+import VideoGridItem from '../../Item/VideoGridItem/VideoGridItem';
 import './Home.scss';
-import VideoData from '../../_video_list.json';
-import Loading from '../Loading';
+import VideoData from '../../../_video_list.json';
+import Loading from '../../Loading';
 
 const fakeFetch = (delay = 1000) => new Promise(res=>setTimeout(res,delay));
 
