@@ -1,0 +1,32 @@
+.favorite-item{
+    position: relative;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    padding : 8px;
+
+    .favorite-name{
+        margin-top : 5px;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow : hidden;
+        white-space: nowrap;
+    }
+    .favorite-description{
+        width: 100%;
+        padding : 8px;
+        max-height: 150px;
+    }
+
+    .favorite-elemenet-count{
+        position : absolute;
+        color: grey;
+        font-size: 12pt;
+        bottom: 10%;
+        &.full{
+            color : red;
+        }
+    }
+}

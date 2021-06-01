@@ -1,5 +1,35 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-flow: row column dense;
+.favorite-template{
+    .favorite-grid-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 16px;
+        grid-column-gap : 16px;
+        padding : 24px;
+        background : white;
+    }
+    .btn-group{
+        padding : 16px;
+        background: white;
+
+        button{
+            display: inline-flex;
+            font-size: 1.5rem;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            padding-left: 1em;
+            padding-right: 1em;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            border-radius: 1rem;
+            background: #22b8cf;
+            margin: auto;
+        }
+        button + button {
+            margin-left : 8px;
+        }
+    }
+
+    
 }

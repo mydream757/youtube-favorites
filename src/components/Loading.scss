@@ -1,0 +1,15 @@
+#loading-wrap{
+    position : relative;
+    width: 100%;
+    height: auto;
+    #loading{
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
+        
+        font-size: 24pt;
+        font-weight: 600;
+    }
+}

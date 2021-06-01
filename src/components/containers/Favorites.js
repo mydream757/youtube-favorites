@@ -3,6 +3,8 @@ import './Favorite.scss';
 import FavoriteGridItem from '../Item/FavoriteGridItem';
 import ModalBase from './ModalBase';
 import FavGenModal from './FavGenModal';
+import Loading from '../Loading';
+import { Link } from 'react-router-dom';
 
 const fakeFetch = (delay = 1000) => new Promise(res=>setTimeout(res,delay));
 
@@ -37,29 +39,26 @@ const Favorites = () => {
 
     const generateFav = useCallback((data)=>{
         const nextData = getLocalList().concat(data);
-        console.log('whatData?', nextData);
         localStorage.setItem("favorite_list", JSON.stringify(nextData))
         handleModal();
         fetchFavoriteList();
     }, []);
 
     return (
-        <div>
-            <div>
-                <button className="gen-btn" onClick={handleModal}>생성</button>
-                <button className="edit-btn">편집</button>
-                <button className="del-btn">삭제</button>
+        <div className="favorite-template">
+            <div className="btn-group">
+                <button id="gen-btn" onClick={handleModal}>생성</button>
+                <button id="edit-btn">편집</button>
+                <button id="sum-btn">합치기</button>
+                <button id="del-btn">삭제</button>
             </div>
-            <hr/>
-            <div className="grid-container">
+            <div className="favorite-grid-container">
                 {favorite_list.map((item)=>(
-                    <FavoriteGridItem 
-                        favorite={item}
-                    />
+                    <Link>
+                    <FavoriteGridItem favorite={item}></FavoriteGridItem>
+                    </Link>
                 ))}
-                <div className="loading">
-                {isLoading && "Loading..."}
-            </div>
+                <Loading isLoading={isLoading}/>
             </div>
             {isModalOn && 
                 <ModalBase handleModal={handleModal}>

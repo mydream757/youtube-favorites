@@ -5,6 +5,7 @@ const FavGenModal = ({ handleOk, handleCancel }) => {
     const [isErr, setError] = useState(false);
     const name = useRef(null);
     const description = useRef(null);
+    
     useEffect(()=>{
         name.current.focus();
     }, []);
@@ -20,7 +21,6 @@ const FavGenModal = ({ handleOk, handleCancel }) => {
         }else{
             setError(true);
         }
-        
     },[]);
 
     const onChangeInput = (e)=>{
@@ -32,7 +32,7 @@ const FavGenModal = ({ handleOk, handleCancel }) => {
         }
     };
     return (
-        <div>
+        <div className="gen-fav-inner">
             <h2>새로운 즐겨찾기 생성</h2>
             <form>
                 <div>

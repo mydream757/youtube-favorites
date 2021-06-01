@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <div id="wrap">
-      <section className="tabArea">
+      <section className="nav-bar">
         <ul className="tab">
-          <li className="on">
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li>
@@ -17,10 +17,10 @@ function App() {
           </li>
         </ul>
       </section>
-      
-      <hr/>
-      <Route exact path="/" component={Home}/>
-      <Route path="/favorites" component={Favorites}/>
+      <div id="content-area">
+        <Route exact path="/" component={Home}/>
+        <Route path="/favorites" component={Favorites}/>
+      </div>
     </div>
   );
 }

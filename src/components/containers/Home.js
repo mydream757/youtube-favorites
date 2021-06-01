@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import VideoGridItem from '../Item/VideoGridItem';
 import './Home.scss';
 import VideoData from '../../_video_list.json';
+import Loading from '../Loading';
 
 const fakeFetch = (delay = 1000) => new Promise(res=>setTimeout(res,delay));
 
@@ -48,28 +49,23 @@ const Home = () => {
         observer.observe(target.current);
         return () => observer.disconnect(); */
         let observer;
-        if(target){
-            observer = new IntersectionObserver(onIntersect, { threshold: 0.8});
+        if(target!==null){
+            observer = new IntersectionObserver(onIntersect, { threshold: 0.5});
             observer.observe(target);
         }
         return () => observer && observer.disconnect();
     }, [target]);
-
-    const onClickItem = (e) => {
-        
-    }
     
     return (
-        <div className="grid-container">
+        <div className="video-grid-container">
             {videos.map(video=>(
             <VideoGridItem 
-                key={video.id}
+                key={video.video_id}
                 video={video}
             />
             ))}
-            <div ref={setTarget} className="Loading">
-                {isLoading && "Loading..."}
-            </div>
+            <div ref={setTarget}/>
+            <Loading isLoading={isLoading}/>
         </div>
         
     );

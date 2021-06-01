@@ -1,18 +1,37 @@
+@import './utils.scss';
+
+$nav_back_dark_blue : #222f46;
+$nav_text_grey : #9ba4a9;
+
 * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
 } 
-a { 
-    text-decoration: none; 
-} 
 body { 
     font-size: 14px; 
-    color: #333; 
-    padding : 12px;
+    background: $back_grey;
 } 
-.tabArea { 
+#wrap{
+    min-width: 1080px;
+    overflow: hidden;
+    background:$back_grey;
+    #content-area{
+        width: 1080px;
+        height: 100%;
+        margin: 15px auto 0;
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav-bar { 
+    background: $nav_back_dark_blue;
     margin: 0 auto; 
+    padding: 12px;
     .tab { 
         display: flex; 
         justify-content: flex-start;
@@ -21,19 +40,12 @@ body {
             padding: 5px;
             a { 
                 font-size: 1.5rem; 
-                color: #333; 
+                color: $nav_text_grey; 
                 font-weight: 500;
                 &:hover{
-                    color: rgb(248, 218, 214);
+                    color: white;
                 } 
             }
-            &.on{
-                a {
-                    font-weight: bold; 
-                    color: crimson; 
-                } 
-            }
-            
         } 
     }
 } 
