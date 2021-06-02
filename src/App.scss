@@ -1,4 +1,4 @@
-@import './utils.scss';
+@import '../src/utils.scss';
 
 $nav_back_dark_blue : #222f46;
 $nav_text_grey : #9ba4a9;
@@ -25,6 +25,7 @@ body {
 a{
     text-decoration: none;
     color: black;
+    
 }
 
 
@@ -42,9 +43,10 @@ a{
                 font-size: 1.5rem; 
                 color: $nav_text_grey; 
                 font-weight: 500;
-                &:hover{
-                    color: white;
-                } 
+            }
+            .visited{
+                color: white;
+                font-weight: 600;
             }
         } 
     }

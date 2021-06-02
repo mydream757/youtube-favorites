@@ -1,17 +1,21 @@
 @import '../../../utils.scss';
 
-.favorite-detail-template{
-    background : white;
-    display: block;
-    padding : 12px;
-    min-height: 250px;
+.fav-list-inner{
+    padding : 16px;
+    min-width: 380px;
+    .fav-list-container{
+        border : 2px solid black;
+        height: 240px;
+        margin-top: 16px;
+        max-height: 240px;
+        overflow-y: scroll;
+    }
     .btn-group{
         padding : 16px;
-        background: white;
-
+        display: flex;
         button{
             display: inline-flex;
-            font-size: 1.2rem;
+            font-size: 1rem;
             box-shadow: 1px 4px 0 $button_shadow;
             font-weight: 600;
             outline: none;
@@ -36,3 +40,4 @@
         }
     }
 }
+

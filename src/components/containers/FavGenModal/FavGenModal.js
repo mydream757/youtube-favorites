@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { getFavoriteList } from 'src/components/Utils';
 import './FavGenModal.scss';
 
-const FavGenModal = ({ handleOk, handleCancel }) => {
+const FavGenModal = ({ title, handleOk, toggleModal, checkedList = [] }) => {
     const [isErr, setError] = useState(false);
     const name = useRef(null);
     const description = useRef(null);
@@ -11,16 +12,35 @@ const FavGenModal = ({ handleOk, handleCancel }) => {
     }, []);
 
     const handleGenerate = useCallback((e)=>{
+        
         if(name.current.value.trim().length > 0){
-            handleOk({
-                id : Math.floor(Math.random() * 1000000),
+            let videos;
+            if(checkedList.length === 0){
+                videos = [];
+            }else{
+                videos = new Set();
+                const fav_list = getFavoriteList();
+                
+                fav_list.forEach((item)=>{
+                    if(checkedList.includes(item.id)){
+                        for(let i=0; i<item.videos.length; i++){
+                            if(videos.size < 20) videos.add(item.videos[i]);
+                            else break;
+                        }
+                    }
+                });
+                videos = [...videos];
+            }
+            handleOk([{
+                id : Math.floor(Math.random() * 1000000).toString(),
                 name : name.current.value,
                 description : description.current.value,
-                count : 0
-            })
+                videos : videos
+            }])
         }else{
             setError(true);
         }
+
     },[]);
 
     const onChangeInput = (e)=>{
@@ -33,7 +53,7 @@ const FavGenModal = ({ handleOk, handleCancel }) => {
     };
     return (
         <div className="gen-fav-inner">
-            <h2>새로운 즐겨찾기 생성</h2>
+            <h2>{title}</h2>
             <form>
                 <div>
                     <label for="name">이름</label>
@@ -60,7 +80,7 @@ const FavGenModal = ({ handleOk, handleCancel }) => {
                 </div>
                 <div className="btn-group">
                     <button type="button" onClick={handleGenerate}>생성</button>
-                    <button type="button" onClick={handleCancel}>취소</button>
+                    <button type="button" onClick={toggleModal}>취소</button>
                 </div>
             
             </form>

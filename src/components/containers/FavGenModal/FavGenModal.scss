@@ -1,4 +1,4 @@
-@import '../../utils.scss';
+@import '../../../utils.scss';
 
 $input_inner_grey : #495057;
 $input_border_grey : #999;
@@ -45,22 +45,32 @@ $input_border_grey : #999;
     };
     
     .btn-group{
+        padding : 16px;
         display: flex;
         button{
             display: inline-flex;
             font-size: 1rem;
+            box-shadow: 1px 4px 0 $button_shadow;
             font-weight: 600;
             outline: none;
             border: none;
-            padding-left: 1em;
-            padding-right: 1em;
+            padding: 0.5em 1em;
             align-items: center;
             cursor: pointer;
             color: white;
-            border-radius: 1rem;
+            border-radius: 2rem;
             background: $basic_btn_beryline;
             margin: auto;
-            
+            &:active, &.active{
+                background : $basic_btn_active;
+                box-shadow: 1px 2px 0 $button_shadow;
+                top : 2px;
+                position : relative;
+            }
+        }
+        
+        button + button {
+            margin-left : 8px;
         }
     }
 }

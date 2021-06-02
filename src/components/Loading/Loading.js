@@ -1,10 +1,10 @@
 import React from 'react';
 import './Loading.scss';
 
-const Loading = ({isLoading}) => {
+const Loading = () => {
     return (
         <div id="loading-wrap">
-            <div id="loading">{isLoading && "Loading..."}</div>
+            <div id="loading">Loading...</div>
         </div>
     );
 };

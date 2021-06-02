@@ -1,25 +1,30 @@
 import './App.scss';
-import { Route } from 'react-router';
-import Home from './components/containers/Home/Home';
-import Favorites from './components/containers/Favorites/Favorites';
-import { Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import Home from 'src/components/containers/Home/Home';
+import Favorites from 'src/components/containers/Favorites/Favorites';
+import { NavLink } from 'react-router-dom';
+import FavoriteDetail from './components/containers/FavoriteDetail/FavoriteDetail';
+import FavoriteRouter from './components/FavoriteRouter';
 
 function App() {
+  
   return (
     <div id="wrap">
       <section className="nav-bar">
         <ul className="tab">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink activeClassName="visited" exact to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/favorites">Favorites</Link>
+            <NavLink activeClassName="visited" to="/favorites">Favorites</NavLink>
           </li>
         </ul>
       </section>
       <div id="content-area">
-        <Route exact path="/" component={Home}/>
-        <Route path="/favorites" component={Favorites}/>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/favorites" component={FavoriteRouter}/>
+        </Switch>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import '../../../utils.scss';
+
 .video-anchor{
     width: 100%;
     cursor: pointer;
@@ -9,6 +11,26 @@
     flex-direction: column;
     position: relative;
     height: 100%;
+    .video-checkbox{
+        position : absolute;
+        top : 5%;
+        left : 5%;
+        input{
+            display: none;
+        }
+        input + label{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border : 2px solid $checkbox_color;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        input:checked + label{
+            background-color : $checkbox_color;
+        }
+
+    }
     .video-thumbnail-wrap{
         width: auto;
         height: 148px;
