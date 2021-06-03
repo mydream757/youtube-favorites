@@ -1,0 +1,82 @@
+@import '../../utils.scss';
+
+.favorite-detail-template{
+    background : white;
+    display: block;
+    padding : 12px;
+    min-height: 250px;
+    
+    .title-area{
+        display: flex;
+        direction: row;
+        height: 3rem;
+
+        .fav-title{
+            font-size: 1.5rem;
+            position: relative;
+            font-weight: 500;
+            input{
+                width: 250px;
+                font-size: inherit;
+                outline: none;
+                border : none;
+                color: white;
+                background: $input_inner_grey;
+                padding : 2px;
+                font-weight: inherit;
+                border : 1px solid $input_border_grey;
+                border-radius: 3px;
+    
+            }
+            #edit-title-btn{
+                position : absolute;
+                top : -50%;
+                right: -35%;
+
+            }
+        }
+    }
+    .video-grid-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 16px;
+        grid-column-gap : 16px;
+        .noti-text{
+            text-align: center;
+            grid-column: 1/5;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    
+    .btn-group, .title-area{
+        padding : 16px;
+        background: white;
+
+        button{
+            display: inline-flex;
+            font-size: 1.2rem;
+            box-shadow: 1px 4px 0 $button_shadow;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            padding: 0.5em 1em;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            border-radius: 2rem;
+            background: $basic_btn_beryline;
+            margin: auto;
+            &:active, &.active{
+                background : $basic_btn_active;
+                box-shadow: 1px 2px 0 $button_shadow;
+                top : 2px;
+                position : relative;
+            }
+        }
+        
+        button + button {
+            margin-left : 8px;
+        }
+    }
+}
