@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+### contact
+ name : Joonyoung Choi
+ email : <mydream757@gmail.com>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 사용 기술
+* Javascript + React.js
+* HTML
+* CSS
 
-## Available Scripts
+### 구현 내용
+* 화면
+ + 10000개의 비디오 리스트 화면 : Home
+ + Favorite List 선택 화면 : Favorites
+ + 각 Favorite List 내부에 포함된 비디오 리스트 화면 : FavoriteDetail
+* 기능 및 특징
+ + Favorite List 생성
+ + Favorite List에 비디오 목록 추가
+ + 각 Favorite List 삭제 / 편집
+ + Favorie List 합치기
+ + Home 화면의 비디오 리스트는 100개씩 렌더링, 스크롤 로딩으로 추가 로딩
+ + LocalStorage 데이터 저장
+ + 비디오 선택 시 Youtube의 해당 영상 페이지로 새창 열기
 
-In the project directory, you can run:
+### 프로젝트 실행 방법
+1. 프로젝트 세팅
+ * Download ZIP
+  or
+ * 클론 프로젝트: https://github.com/mydream757/youtube-favorites.git
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. 의존성 설치
+```bash
+    $npm install
+```
+3. 프로젝트 실행
+```bash
+    $npm start
+```
