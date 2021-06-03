@@ -29,8 +29,9 @@
  * Download ZIP
   or
  * 클론 프로젝트: https://github.com/mydream757/youtube-favorites.git
+2. _video_list.json 파일 추가 : src/_video_list.json 경로에 추가
 
-2. 의존성 설치
+3. 의존성 설치
 ```bash
     $npm install
 ```
